@@ -2,19 +2,19 @@ public class GuessGame{
     public static void main(String[] args){
         
         if (args.length == 0 || args[0].equalsIgnoreCase("help")){
-            System.out.println("µ{¦¡¥Îªk:java GuessGame (¼Æ¦r1-5)");
+            System.out.println("ç¨‹å¼ç”¨æ³•:java GuessGame (æ•¸å­—1-5)");
         }else if(!args[0].matches("\\d")){
-            System.out.println("»Ý¿é¤Jªü©Ô§B¼Æ¦r");
+            System.out.println("éœ€è¼¸å…¥é˜¿æ‹‰ä¼¯æ•¸å­—");
         }else{
         int guessing = Integer.parseInt(args[0]);    
         if (guessing >5 || guessing <1){
-            System.out.println("¿é¤J½d³ò¿ù»~,½Ð¿é¤J¼Æ¦r1-5");
+            System.out.println("è¼¸å…¥ç¯„åœéŒ¯èª¤,è«‹è¼¸å…¥æ•¸å­—1-5");
         }else if (guessing >=1 && guessing <= 5){
             int random = (int)((Math.random()*5)+1); //0-0.9*5=4.5 4.5+1=5(int)
             if (random == guessing)
-                System.out.println("®¥³ß§A,²q¹ï¤F!");
+                System.out.println("æ­å–œä½ ,çŒœå°äº†!");
             else
-                System.out.println("²q¿ù¤F,½Ð­«·s¿é¤J"); 
+                System.out.println("çŒœéŒ¯äº†,è«‹é‡æ–°è¼¸å…¥"); 
             }
         }
     }
